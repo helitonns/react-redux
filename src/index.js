@@ -1,19 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./04/02/App";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import App from "./04/04/App";
+import store from "./04/04/store/configureStore";
 
-function reducer(state = 0, action){
-  switch(action.type){
-    case "INCREMENTAR":
-      return state + 1;
-    default:
-      return state;
-  }
-}
-
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
